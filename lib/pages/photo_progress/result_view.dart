@@ -450,7 +450,7 @@ class _ResultViewState extends State<ResultView> {
                               }).toList();
                             },
                             touchTooltipData: LineTouchTooltipData(
-                              tooltipBgColor: TColor.secondaryColor1,
+                              getTooltipColor: (lineBarSpot) => TColor.secondaryColor1,
                               tooltipRoundedRadius: 20,
                               getTooltipItems:
                                   (List<LineBarSpot> lineBarsSpot) {
@@ -608,7 +608,7 @@ class _ResultViewState extends State<ResultView> {
   LineTouchData get lineTouchData1 => LineTouchData(
         handleBuiltInTouches: true,
         touchTooltipData: LineTouchTooltipData(
-          tooltipBgColor: Colors.blueGrey.withOpacity(0.8),
+          getTooltipColor: (lineBarSpot) => Colors.blueGrey.withOpacity(0.8),
         ),
       );
 

@@ -168,7 +168,7 @@ class _SleepTrackerViewState extends State<SleepTrackerView> {
                               }).toList();
                             },
                             touchTooltipData: LineTouchTooltipData(
-                              tooltipBgColor: TColor.secondaryColor1,
+                              getTooltipColor: (lineBarSpot) => TColor.secondaryColor1,
                               tooltipRoundedRadius: 5,
                               getTooltipItems:
                                   (List<LineBarSpot> lineBarsSpot) {
