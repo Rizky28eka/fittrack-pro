@@ -1,4 +1,4 @@
-import 'package:carousel_slider/carousel_slider.dart';
+import 'package:carousel_slider/carousel_slider.dart' as carousel_package;
 import 'package:flutter/material.dart';
 
 import '../../common/colo_extension.dart';
@@ -13,7 +13,7 @@ class WhatYourGoalView extends StatefulWidget {
 }
 
 class _WhatYourGoalViewState extends State<WhatYourGoalView> {
-  CarouselController buttonCarouselController = CarouselController();
+  final carousel_package.CarouselController carouselController = carousel_package.CarouselController();
 
   List goalArr = [
     {
@@ -45,7 +45,7 @@ class _WhatYourGoalViewState extends State<WhatYourGoalView> {
           child: Stack(
         children: [
           Center(
-            child: CarouselSlider(
+            child: carousel_package.CarouselSlider(
               items: goalArr
                   .map(
                     (gObj) => Container(
@@ -97,8 +97,8 @@ class _WhatYourGoalViewState extends State<WhatYourGoalView> {
                     ),
                   )
                   .toList(),
-              carouselController: buttonCarouselController,
-              options: CarouselOptions(
+              carouselController: carouselController,
+              options: carousel_package.CarouselOptions(
                 autoPlay: false,
                 enlargeCenterPage: true,
                 viewportFraction: 0.7,
